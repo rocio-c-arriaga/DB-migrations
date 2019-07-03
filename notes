@@ -1,0 +1,32 @@
+DATA BASE MIGRATION
+npm install -g sequelize-cli
+//npm init - node_modules
+npm install
+npm install --save sequelize
+npm init
+npm install --save sequelize
+npm install --save sequelize-cli
+//npx sequelize-cli init : config, migrations, models, 
+
+npx sequelize-cli model:generate --name Mascotas --attributes raza:string,precio:integer,tamaño:string,color:string,sexo:string
+
+npx sequelize-cli db:migrate
+npm install mysql2
+npx sequelize-cli db:create ///crea base de datos??
+
+npx sequelize-cli db:migrate:undo //elimina la migración especificada
+
+//agregar datos por default a una tabla
+npx sequelize-cli seed:generate --name demo-mascota
+
+npx sequelize-cli db:seed:all //ejecuta 
+
+//genera automaticamente nuevo model
+npx sequelize-cli seed:generate --name mascota-agregar-comlumnas
+
+npx sequelize-cli db:seed:all //ejecuta 
+
+OPCIONES DE MIGRACION
+http://docs.sequelizejs.com/class/lib/query-interface.js~QueryInterface.html
+
+history > comandosSequelize.txt
